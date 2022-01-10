@@ -1,0 +1,17 @@
+{
+  "name": "social-media-app",
+  "version": "1.0.0",
+  "description": "A social media personal website project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "app",
+    "website",
+    "social",
+    "media"
+  ],
+  "author": "Danny Santino",
+  "license": "ISC"
+}
