@@ -42,8 +42,7 @@ module.exports = {
             {
                 registerInput: { username, email, password, confirmPassword }
             },
-            context,
-            info) {
+        ) {
             // Validate user data
 
             const { errors, valid } = validateRegisterInput(username, email, password, confirmPassword);

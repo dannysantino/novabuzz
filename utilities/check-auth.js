@@ -13,7 +13,7 @@ module.exports = (context) => {
                 throw new AuthenticationError('Invalid/Expired token');
             }
         }
-        throw new Error('Authentication token must be Bearer [token]');
+        throw new Error('Authentication token must be in the format - Bearer [token]');
     }
     throw new Error('Authorization header must be provided');
 }
