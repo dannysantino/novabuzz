@@ -12,7 +12,7 @@ module.exports = {
                     errors: {
                         body: 'Comment body cannot be empty'
                     }
-                })
+                });
             }
             const post = await Post.findById(postId);
             if (post) {
@@ -20,7 +20,7 @@ module.exports = {
                     body,
                     username,
                     createdAt: new Date().toISOString()
-                })
+                });
                 await post.save();
                 return post;
             }

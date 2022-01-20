@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
-.App {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.page-title {
+    display: block !important;
+    text-align: center;
+    margin-top: 10px;
 }
 
 h1 {
     font-size: 4rem;
+}
+
+.form-container {
+    width: 600px;
+    margin: auto;
 }
