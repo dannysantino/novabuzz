@@ -32,7 +32,6 @@ module.exports = {
             if (body.trim() === '') {
                 throw new Error('Post body cannot be empty');
             }
-            console.log(user);
             const newPost = new Post({
                 body,
                 user: user.id,

@@ -1,8 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useMutation } from '@apollo/client'
+import { useMutation, gql } from '@apollo/client'
 import { Form, Button } from 'semantic-ui-react'
-import gql from 'graphql-tag'
 
 import { useForm } from '../utilities/hooks'
 import { AuthContext } from '../context/auth'
