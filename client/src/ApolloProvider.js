@@ -4,7 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, concat } from '@
 import { setContext } from '@apollo/client/link/context'
 
 const httpLink = new HttpLink({
-    uri: 'http://localhost:8000'
+    uri: 'https://novasocialmedia.herokuapp.com/'
 });
 
 const authLink = setContext(() => {

@@ -1,14 +1,14 @@
 {
-  "name": "social-media-server",
+  "name": "novasocial-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS server app for Novasocial webapp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Danny Santino",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^3.10.1",
