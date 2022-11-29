@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useMutation, gql } from '@apollo/client'
-import { Form, Button } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
 
 import { useForm } from '../utilities/hooks'
 import { AuthContext } from '../context/auth'
@@ -34,39 +34,50 @@ const Login = () => {
     }
 
     return (
-        <div className='form-container'>
-            <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
-                <h1>Login</h1>
-                <Form.Input
-                    label="Username"
-                    placeholder="Username"
-                    name="username"
-                    type="text"
-                    value={values.username}
-                    error={errors.username ? true : false}
-                    onChange={onChange}
-                />
-                <Form.Input
-                    label="Password"
-                    placeholder="Password"
-                    name="password"
-                    type="password"
-                    value={values.password}
-                    error={errors.password ? true : false}
-                    onChange={onChange}
-                />
-                <Button type="submit" primary>Login</Button>
-            </Form>
-            {Object.keys(errors).length > 0 && (
-                <div className="ui error message">
-                    <ul className="list">
-                        {Object.values(errors).map(e => (
-                            <li key={e}>{e}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-        </div>
+        <Grid style={{ height: 'calc(100vh - 66px)' }} verticalAlign='middle' centered>
+            <Grid.Column style={{ maxWidth: 450 }}>
+                <Header as='h2' color='teal' textAlign='center'>
+                    Log in to your account
+                </Header>
+                <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
+                    <Segment>
+                        <Form.Input
+                            label="Username"
+                            name="username"
+                            type="text"
+                            value={values.username}
+                            error={errors.username ? true : false}
+                            onChange={onChange}
+                            icon='user'
+                            iconPosition='left'
+                            fluid
+                        />
+                        <Form.Input
+                            label="Password"
+                            name="password"
+                            type="password"
+                            value={values.password}
+                            error={errors.password ? true : false}
+                            onChange={onChange}
+                            icon='lock'
+                            iconPosition='left'
+                            fluid
+                        />
+                        <Button type="submit" primary fluid>Login</Button>
+                    </Segment>
+
+                </Form>
+                {Object.keys(errors).length > 0 && (
+                    <div className="ui error message">
+                        <ul className="list">
+                            {Object.values(errors).map(e => (
+                                <li key={e}>{e}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </Grid.Column>
+        </Grid>
     )
 }
 
