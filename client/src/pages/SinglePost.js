@@ -48,16 +48,16 @@ const SinglePost = () => {
     } else {
         const { id, username, body, createdAt, likes, likeCount, comments, commentCount } = data.getPost;
         postMarkup = (
-            <Grid>
+            <Grid centered>
                 <Grid.Row>
-                    <Grid.Column width={2}>
+                    <Grid.Column mobile={4} tablet={2} computer={2}>
                         <Image
                             size='small'
                             floated='right'
                             src='https://react.semantic-ui.com/images/avatar/large/molly.png'
                         />
                     </Grid.Column>
-                    <Grid.Column width={10}>
+                    <Grid.Column mobile={12} tablet={10} computer={10}>
                         <Card fluid>
                             <Card.Content>
                                 <Card.Header>{username}</Card.Header>
@@ -68,7 +68,7 @@ const SinglePost = () => {
                             <Card.Content extra>
                                 <LikeButton user={user} post={{ id, likes, likeCount }} />
                                 <MyPopup content={'Comment on post'}>
-                                    <Button as='div' labelPosition='right' onClick={() => console.log('Comment on post')}>
+                                    <Button as='div' labelPosition='right'>
                                         <Button basic color='blue'>
                                             <Icon name='comments' />
                                         </Button>
