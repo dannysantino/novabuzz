@@ -12,9 +12,9 @@ const Home = () => {
     const { user } = useContext(AuthContext);
 
     return (
-        <Grid columns={3}>
+        <Grid columns={3} doubling stackable>
             <Grid.Row className='page-title'>
-                <h1>Recent Posts</h1>
+                <h2>Recent Posts</h2>
             </Grid.Row>
             <Grid.Row>
                 {user && (
