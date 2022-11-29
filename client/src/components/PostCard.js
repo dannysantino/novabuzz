@@ -13,7 +13,7 @@ const PostCard = ({ post: { id, username, body, createdAt, likeCount, likes, com
 
     return (
         <Card fluid>
-            <Card.Content>
+            <Card.Content as={Link} to={`/posts/${id}`}>
                 <Image
                     floated='right'
                     size='mini'
@@ -21,7 +21,7 @@ const PostCard = ({ post: { id, username, body, createdAt, likeCount, likes, com
                 />
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta style={{ marginBottom: 15 }}>{moment(createdAt).fromNow(true)}</Card.Meta>
-                <Card.Description as={Link} to={`/posts/${id}`}>{body}</Card.Description>
+                <Card.Description>{body}</Card.Description>
             </Card.Content>
             <Card.Content extra>
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
