@@ -4,21 +4,27 @@
     box-sizing: border-box;
 }
 
+#root {
+    height: 100vh;
+    max-height: 100vh;
+    background: url(./assets/images/bg-social.jpg) left top/cover no-repeat;
+    overflow-y: auto;
+}
+
+.ui.menu {
+    padding: 15px 0;
+}
+
+.ui.menu a {
+    font-weight: bold !important;
+}
+
 .page-title {
     display: block !important;
     text-align: center;
-    margin-top: 10px;
 }
 
-h1 {
-    font-size: 4rem;
-}
-
-.form-container {
-    width: 600px;
-    margin: auto;
-}
-
-.ui.teal.button:focus, .ui.teal.buttons .button:focus {
+.ui.teal.button:focus,
+.ui.teal.buttons .button:focus {
     background-color: #00b5ad;
 }
