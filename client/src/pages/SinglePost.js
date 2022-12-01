@@ -85,7 +85,7 @@ const SinglePost = () => {
                                 <Card.Content>
                                     <p>Post a comment</p>
                                     <Form>
-                                        <div className="ui action input fluid">
+                                        <div className='ui action input fluid'>
                                             <input
                                                 type='text'
                                                 name='comment'

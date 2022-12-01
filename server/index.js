@@ -1,5 +1,5 @@
-if (process.env.NODE_ENV !== "production") {
-    require("dotenv").config();
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
 }
 
 const { ApolloServer } = require('apollo-server');
@@ -18,7 +18,7 @@ const server = new ApolloServer({
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true })
     .then(() => {
-        console.log("DATABASE CONNECTED!")
+        console.log('DATABASE CONNECTED!')
         return server.listen({ port: PORT })
     })
     .then(res => console.log(`Server running on ${res.url}`))

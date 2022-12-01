@@ -46,8 +46,8 @@ const PostForm = () => {
                 </Form.Field>
             </Form>
             {error && (
-                <div className="ui error message" style={{ marginBottom: 20 }}>
-                    <div className="list">
+                <div className='ui error message' style={{ marginBottom: 20 }}>
+                    <div className='list'>
                         <li>{error.graphQLErrors[0].message}</li>
                     </div>
                 </div>

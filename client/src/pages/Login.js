@@ -42,9 +42,9 @@ const Login = () => {
                 <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
                     <Segment>
                         <Form.Input
-                            label="Username"
-                            name="username"
-                            type="text"
+                            label='Username'
+                            name='username'
+                            type='text'
                             value={values.username}
                             error={errors.username ? true : false}
                             onChange={onChange}
@@ -53,9 +53,9 @@ const Login = () => {
                             fluid
                         />
                         <Form.Input
-                            label="Password"
-                            name="password"
-                            type="password"
+                            label='Password'
+                            name='password'
+                            type='password'
                             value={values.password}
                             error={errors.password ? true : false}
                             onChange={onChange}
@@ -63,13 +63,13 @@ const Login = () => {
                             iconPosition='left'
                             fluid
                         />
-                        <Button type="submit" primary fluid>Login</Button>
+                        <Button type='submit' primary fluid>Login</Button>
                     </Segment>
 
                 </Form>
                 {Object.keys(errors).length > 0 && (
-                    <div className="ui error message">
-                        <ul className="list">
+                    <div className='ui error message'>
+                        <ul className='list'>
                             {Object.values(errors).map(e => (
                                 <li key={e}>{e}</li>
                             ))}
