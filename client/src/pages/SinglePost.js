@@ -67,7 +67,7 @@ const SinglePost = () => {
                             <hr />
                             <Card.Content extra>
                                 <LikeButton user={user} post={{ id, likes, likeCount }} />
-                                <MyPopup content={'Comment on post'}>
+                                <MyPopup content='Comment on post'>
                                     <Button as='div' labelPosition='right'>
                                         <Button basic color='blue'>
                                             <Icon name='comments' />
@@ -85,7 +85,7 @@ const SinglePost = () => {
                                 <Card.Content>
                                     <p>Post a comment</p>
                                     <Form>
-                                        <div className="ui action input fluid">
+                                        <div className='ui action input fluid'>
                                             <input
                                                 type='text'
                                                 name='comment'

@@ -44,9 +44,9 @@ const Register = () => {
                 <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
                     <Segment>
                         <Form.Input
-                            label="Username"
-                            name="username"
-                            type="text"
+                            label='Username'
+                            name='username'
+                            type='text'
                             value={values.username}
                             error={errors.username ? true : false}
                             onChange={onChange}
@@ -55,9 +55,9 @@ const Register = () => {
                             fluid
                         />
                         <Form.Input
-                            label="Email"
-                            name="email"
-                            type="email"
+                            label='Email'
+                            name='email'
+                            type='email'
                             value={values.email}
                             error={errors.email ? true : false}
                             onChange={onChange}
@@ -66,9 +66,9 @@ const Register = () => {
                             fluid
                         />
                         <Form.Input
-                            label="Password"
-                            name="password"
-                            type="password"
+                            label='Password'
+                            name='password'
+                            type='password'
                             value={values.password}
                             error={errors.password ? true : false}
                             onChange={onChange}
@@ -77,9 +77,9 @@ const Register = () => {
                             fluid
                         />
                         <Form.Input
-                            label="Confirm Password"
-                            name="confirmPassword"
-                            type="password"
+                            label='Confirm Password'
+                            name='confirmPassword'
+                            type='password'
                             value={values.confirmPassword}
                             error={errors.confirmPassword ? true : false}
                             onChange={onChange}
@@ -87,12 +87,12 @@ const Register = () => {
                             iconPosition='left'
                             fluid
                         />
-                        <Button type="submit" primary fluid>Register</Button>
+                        <Button type='submit' primary fluid>Register</Button>
                     </Segment>
                 </Form>
                 {Object.keys(errors).length > 0 && (
-                    <div className="ui error message">
-                        <ul className="list">
+                    <div className='ui error message'>
+                        <ul className='list'>
                             {Object.values(errors).map(e => (
                                 <li key={e}>{e}</li>
                             ))}
