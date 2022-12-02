@@ -30,7 +30,7 @@ const PostCard = ({ post: { id, username, body, createdAt, likeCount, likes, com
                         <Button basic color='blue'>
                             <Icon name='comments' />
                         </Button>
-                        <Label as='a' basic color='blue' pointing='left'>
+                        <Label basic color='blue' pointing='left'>
                             {commentCount}
                         </Label>
                     </Button>
