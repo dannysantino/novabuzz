@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { useQuery } from '@apollo/client'
-import { Grid, Transition } from 'semantic-ui-react'
+import { Grid, Loader, Transition } from 'semantic-ui-react'
 
 import PostCard from '../components/PostCard'
 import PostForm from '../components/PostForm'
@@ -23,7 +23,7 @@ const Home = () => {
                     </Grid.Column>
                 )}
                 {loading ? (
-                    <h2>Loading posts...</h2>
+                    <Loader active inline='centered'>Loading Posts...</Loader>
                 ) : (
                     <Transition.Group>
                         {data && data.getPosts.map(e => (
