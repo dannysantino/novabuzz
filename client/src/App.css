@@ -24,6 +24,10 @@
     text-align: center;
 }
 
+.ui.active.loader {
+    margin-top: 2rem;
+}
+
 .ui.teal.button:focus,
 .ui.teal.buttons .button:focus {
     background-color: #00b5ad;

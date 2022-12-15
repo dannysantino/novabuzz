@@ -4,7 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, concat } from '@
 import { setContext } from '@apollo/client/link/context'
 
 const httpLink = new HttpLink({
-    uri: 'https://novabuzz.onrender.com'
+    uri: process.env.REACT_APP_API_BASE_URL
 });
 
 const authLink = setContext(() => {
