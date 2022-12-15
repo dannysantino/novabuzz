@@ -32,7 +32,7 @@ Users can also like posts on Novabuzz to show their appreciaition for the conten
 
 1. Clone the repository
 
-    `https://github.com/dannysantino/website-project-social-media-app.git`
+    `git clone https://github.com/dannysantino/website-project-social-media-app.git`
 
 2. Install dependencies
 
